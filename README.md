@@ -62,23 +62,24 @@ If you received a ZIP archive instead:
    npm install
 
 4. Create a `.env` file (use the `.env.example` as a template):
-   PORT=5000
-   MYSQL_HOST=localhost
-   MYSQL_USER=root
-   MYSQL_PASSWORD=your_mysql_password
-   MYSQL_DATABASE=ecommerce
-   MONGODB_URI=mongodb://localhost:27017
-   MONGODB_DB=ecommerce_catalog
-   JWT_SECRET=your_super_secret_key_change_this
+   |PORT=5000|
+   |---------|
+   |MYSQL_HOST=localhost|
+   |MYSQL_USER=root|
+   |MYSQL_PASSWORD=your_mysql_password|
+   |MYSQL_DATABASE=ecommerce|
+   |MONGODB_URI=mongodb://localhost:27017|
+   |MONGODB_DB=ecommerce_catalog|
+   |JWT_SECRET=your_super_secret_key_change_this|
 
-5. Import the MySQL dump:
+6. Import the MySQL dump:
    mysql -u root -p < database.sql
 
-6. Start MongoDB: `mongod` (in a separate terminal)
+7. Start MongoDB: `mongod` (in a separate terminal)
 
-7. Start the backend: `npm start`
+8. Start the backend: `npm start`
 
-8. Open the HTML files as described above.
+9. Open the HTML files as described above.
 
 ENVIRONMENT VARIABLES
 
