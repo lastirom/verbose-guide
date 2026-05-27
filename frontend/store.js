@@ -1,4 +1,4 @@
-const API = 'https://7m2hvlrc-5000.asse.devtunnels.ms';
+const API = 'http://localhost:5000';
 let products = [];
 let filteredProducts = [];
 let cart = [];
