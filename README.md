@@ -81,19 +81,6 @@ If you received a ZIP archive instead:
 
 9. Open the HTML files as described above.
 
-ENVIRONMENT VARIABLES
-
-| Variable          | Description                                    |
-|-------------------|------------------------------------------------|
-| PORT              | Server port (default 5000)                    |
-| MYSQL_HOST        | MySQL host (usually localhost)                |
-| MYSQL_USER        | MySQL username                                |
-| MYSQL_PASSWORD    | MySQL password                                |
-| MYSQL_DATABASE    | Database name (ecommerce)                     |
-| MONGODB_URI       | MongoDB connection string                     |
-| MONGODB_DB        | MongoDB database name (ecommerce_catalog)     |
-| JWT_SECRET        | Secret for signing JWTs (change it!)          |
-
 TROUBLESHOOTING
 ---------------
 - `Cannot find module 'bcrypt'` → run `npm install` inside the `backend` folder.
