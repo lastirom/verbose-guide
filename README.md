@@ -83,7 +83,7 @@ If you received a ZIP archive instead:
 ENVIRONMENT VARIABLES
 
 | Variable          | Description                                    |
-|--------------------------------------------------------------------|
+|-------------------|------------------------------------------------|
 | PORT              | Server port (default 5000)                    |
 | MYSQL_HOST        | MySQL host (usually localhost)                |
 | MYSQL_USER        | MySQL username                                |
