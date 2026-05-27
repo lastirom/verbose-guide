@@ -1,0 +1,22 @@
+# Node modules
+node_modules/
+
+# Environment variables (actual secrets)
+.env
+
+# Uploaded images (keep folder structure but not images)
+backend/uploads/
+
+# OS junk files
+.DS_Store
+Thumbs.db
+
+# Logs
+*.log
+
+# IDE folders
+.vscode/
+.idea/
+
+# Package lock (optional – include if you want to commit it, but not necessary)
+# package-lock.json

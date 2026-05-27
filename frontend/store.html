@@ -1,0 +1,167 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"> <!-- Responsive viewport -->
+    <title>TechVault | Premium Electronics</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,700;0,900;1,700&family=DM+Sans:opsz,wght@9..40,300;9..40,400;9..40,500;9..40,600;9..40,700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="store.css">
+</head>
+<body>
+
+<!-- ==================== HTML STRUCTURE ==================== -->
+
+<!-- Start of NAVBAR section -->
+<nav class="navbar">
+    <div class="nav-inner">
+        <a href="#" class="brand">
+            <span class="brand-word">Tech<span>Vault</span></span>
+            <span class="brand-sup">Electronics</span>
+        </a>
+        <div class="nav-search">
+            <svg width="16" height="16" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24">
+                <circle cx="11" cy="11" r="8"/><path d="m21 21-4.35-4.35"/>
+            </svg>
+            <input type="text" id="searchInput" placeholder="Search phones, IEMs, keyboards, mice…">
+        </div>
+        <div class="nav-right">
+            <button class="nav-ghost" id="accountBtn">
+                <svg width="15" height="15" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24">
+                    <path d="M20 21v-2a4 4 0 0 0-4-4H8a4 4 0 0 0-4 4v2"/><circle cx="12" cy="7" r="4"/>
+                </svg>
+                <span id="accountLabel">Account</span>
+            </button>
+            <button class="cart-btn" id="cartIcon">
+                <svg width="16" height="16" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24">
+                    <path d="M6 2 3 6v14a2 2 0 0 0 2 2h14a2 2 0 0 0 2-2V6l-3-4z"/>
+                    <line x1="3" y1="6" x2="21" y2="6"/>
+                    <path d="M16 10a4 4 0 0 1-8 0"/>
+                </svg>
+                Cart
+                <span class="cart-badge" id="cartCount">0</span>
+            </button>
+        </div>
+    </div>
+</nav>
+
+<!-- HERO SECTION -->
+<section class="hero">
+    <div class="hero-inner">
+        <div>
+            <p class="hero-eyebrow">Curated for enthusiasts</p>
+            <h1 class="hero-title">Premium tech,<br><em>built to last</em></h1>
+            <p class="hero-sub">Smartphones, IEMs, mice, keyboards; handpicked for performance and quality you can feel.</p>
+        </div>
+        <div class="hero-stats">
+            <div class="stat-row">
+                <div class="stat-num accent" id="heroCount">—</div>
+                <div class="stat-label">Products</div>
+            </div>
+            <div class="stat-row">
+                <div class="stat-num">7d</div>
+                <div class="stat-label">Delivery</div>
+            </div>
+            <div class="stat-row">
+                <div class="stat-num accent" id="totalItemsStat">—</div>
+                <div class="stat-label" id="totalItemsLabel">Total Items</div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- FILTER BAR (category chips) -->
+<div class="filter-bar">
+    <div class="filter-inner" id="filtersRow">
+        <span class="filter-label">Category</span>
+        <button class="chip active" data-cat="all">All</button>
+    </div>
+</div>
+
+<!-- PRODUCT GRID -->
+<div class="grid-wrap">
+    <div class="grid-meta">
+        <h2 class="grid-heading">All Products</h2>
+        <span class="grid-count" id="gridCount"></span>
+    </div>
+    <div class="products-grid" id="storeGrid">
+        <div class="skel-card"><div class="skel skel-img"></div><div class="skel-body"><div class="skel skel-line w80"></div><div class="skel skel-line w60"></div><div class="skel skel-line w40"></div></div></div>
+        <div class="skel-card"><div class="skel skel-img"></div><div class="skel-body"><div class="skel skel-line w80"></div><div class="skel skel-line w60"></div><div class="skel skel-line w40"></div></div></div>
+        <div class="skel-card"><div class="skel skel-img"></div><div class="skel-body"><div class="skel skel-line w80"></div><div class="skel skel-line w60"></div><div class="skel skel-line w40"></div></div></div>
+        <div class="skel-card"><div class="skel skel-img"></div><div class="skel-body"><div class="skel skel-line w80"></div><div class="skel skel-line w60"></div><div class="skel skel-line w40"></div></div></div>
+    </div>
+</div>
+
+<footer class="site-footer">
+    &copy; 2026 <span>TechVault</span> | All rights reserved
+</footer>
+
+<!-- BACKDROP (for side panel) -->
+<div id="backdrop" class="backdrop"></div>
+
+<!-- CART SIDE PANEL -->
+<aside id="cartPanel" class="side-panel">
+    <div class="panel-head">
+        <h3>Your Cart</h3>
+        <button class="panel-close" id="closeCart">
+            <svg width="14" height="14" fill="none" stroke="currentColor" stroke-width="2.5" viewBox="0 0 24 24">
+                <path d="M18 6 6 18M6 6l12 12"/>
+            </svg>
+        </button>
+    </div>
+    <div class="cart-scroll" id="cartItemsList">
+        <div class="cart-empty-state">
+            <svg width="48" height="48" fill="none" stroke="currentColor" stroke-width="1.2" viewBox="0 0 24 24">
+                <path d="M6 2 3 6v14a2 2 0 0 0 2 2h14a2 2 0 0 0 2-2V6l-3-4z"/>
+                <line x1="3" y1="6" x2="21" y2="6"/>
+                <path d="M16 10a4 4 0 0 1-8 0"/>
+            </svg>
+            <p>Your cart is empty</p>
+        </div>
+    </div>
+    <div class="panel-foot">
+        <div class="total-row">
+            <span class="total-label">Order total</span>
+            <span class="total-val" id="cartTotal">$0.00</span>
+        </div>
+        <button class="checkout-btn" id="checkoutBtn">Proceed to Checkout</button>
+    </div>
+</aside>
+
+<!-- AUTH MODAL (Login / Register) -->
+<div id="authModal" class="modal">
+    <div class="modal-box" style="max-width:440px">
+        <div class="modal-head">
+            <h3 id="authTitle">Login</h3>
+            <button class="modal-x" onclick="document.getElementById('authModal').classList.remove('open')">
+                <svg width="13" height="13" fill="none" stroke="currentColor" stroke-width="2.5" viewBox="0 0 24 24"><path d="M18 6 6 18M6 6l12 12"/></svg>
+            </button>
+        </div>
+        <div class="modal-body">
+            <div id="authForm"></div>
+            <p id="authSwitch" class="f-switch"></p>
+        </div>
+    </div>
+</div>
+
+<!-- PROFILE MODAL (user account details) -->
+<div id="profileModal" class="modal">
+    <div class="modal-box" style="max-width:480px">
+        <div class="modal-head">
+            <h3>My Profile</h3>
+            <button class="modal-x" onclick="document.getElementById('profileModal').classList.remove('open')">
+                <svg width="13" height="13" fill="none" stroke="currentColor" stroke-width="2.5" viewBox="0 0 24 24"><path d="M18 6 6 18M6 6l12 12"/></svg>
+            </button>
+        </div>
+        <div class="modal-body">
+            <div id="profileForm"></div>
+        </div>
+    </div>
+</div>
+
+<!-- TOAST NOTIFICATION -->
+<div class="toast" id="toast"></div>
+
+<script src="store.js"></script>
+</body>
+</html>

@@ -32,19 +32,8 @@ If you received this project as a ZIP file:
    MYSQL_DATABASE=ecommerce
    MONGODB_URI=mongodb://localhost:27017
    MONGODB_DB=ecommerce_catalog
-   JWT_SECRET=your_super_secret_key_change_this
-5. Set up MySQL – run the SQL script below (or use the provided database.sql file) to create the database and tables.
-6. Start MongoDB – run mongod in a separate terminal (or start it as a service).
-7. Start the backend:
-   npm start
-   You should see "Server running on http://localhost:5000".
-8. Open the frontend in your browser (double-click or open via file menu):
-   - Admin dashboard – frontend/admin-dashboard.html
-   - Customer store – frontend/store.html
-
-MYSQL SCHEMA
-
-Run the following SQL in your MySQL client:
+   JWT_SECRET=password123
+5. Set up MySQL – Open your MySQL client and run the following commands to create the database and tables:
 
 CREATE DATABASE IF NOT EXISTS ecommerce;
 USE ecommerce;
@@ -106,18 +95,26 @@ CREATE INDEX idx_orders_user_id ON orders(user_id);
 CREATE INDEX idx_order_items_order_id ON order_items(order_id);
 CREATE INDEX idx_user_cart_user_id ON user_cart(user_id);
 
+6. Start MongoDB – run mongod in a separate terminal (or start it as a service).
+7. Start the backend:
+   npm start
+   You should see "Server running on http://localhost:5000".
+8. Open the frontend in your browser (double-click or open via file menu):
+   - Admin dashboard – frontend/admin-dashboard.html
+   - Customer store – frontend/store.html
+
 ENVIRONMENT VARIABLES
 
-| Variable | Description |
-|----------|-------------|
-| PORT | Server port (default 5000) |
-| MYSQL_HOST | MySQL host (usually localhost) |
-| MYSQL_USER | MySQL username |
-| MYSQL_PASSWORD | MySQL password |
-| MYSQL_DATABASE | Database name (ecommerce) |
-| MONGODB_URI | MongoDB connection string |
-| MONGODB_DB | MongoDB database name (ecommerce_catalog) |
-| JWT_SECRET | Secret for signing JWTs (change it) |
+| Variable       | Description                               |
+|----------------|-------------------------------------------|
+| PORT           | Server port (default 5000)                |
+| MYSQL_HOST     | MySQL host (usually localhost)            |
+| MYSQL_USER     | MySQL username                            |
+| MYSQL_PASSWORD | MySQL password                            |
+| MYSQL_DATABASE | Database name (ecommerce)                 |
+| MONGODB_URI    | MongoDB connection string                 |
+| MONGODB_DB     | MongoDB database name (ecommerce_catalog) |
+| JWT_SECRET     | Secret for signing JWTs (change it)       |
 
 TROUBLESHOOTING
 
