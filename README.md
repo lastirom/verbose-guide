@@ -59,7 +59,7 @@ If you received this as a Git repository, follow these steps:
 
 11. Open the frontend
    |Admin dashboard: open `frontend/admin-dashboard.html` in your browser|
-   |-----------------------------------------------------------------------|
+   |---------------------------------------------------------------------|
    |Customer store: open `frontend/store.html` in your browser|
 
 SETUP FROM ZIP FILE
