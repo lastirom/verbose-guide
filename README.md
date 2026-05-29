@@ -21,37 +21,39 @@ SETUP FROM GIT CLONE (recommended)
 If you received this as a Git repository, follow these steps:
 
 1. Clone the repository
-   |git clone https://github.com/lastirom/verbose-guide.git|
-   |-------------------------------------------------------|
-   |cd verbose-guide|
-
-2. Install backend dependencies
+   ```bash
+   git clone https://github.com/lastirom/verbose-guide.git
+   exit
+   ```bash
+   cd verbose-guid
+   exit
+3. Install backend dependencies
    |cd backend|
    |----------|
    |npm install|
 
-3. Prepare environment variables
+4. Prepare environment variables
    |Copy `.env.example` to `.env` and edit with your credentials:|
    |-------------------------------------------------------------|
    |cp .env.example .env|
    |Then open `.env` and set your MySQL password, MongoDB URI, etc.|
 
-4. Create MySQL database using the provided dump file
+5. Create MySQL database using the provided dump file
    |mysql -u root -p < database.sql|
    |-------------------------------|
    |(Enter your MySQL password when prompted.)|
 
-5. Start MongoDB
+6. Start MongoDB
    |Open a separate terminal and run:|
    |---------------------------------|
    |mongod|
 
-6. Start the backend server
+7. Start the backend server
    |npm start|
    |---------|
    |You should see: "Server running on http://localhost:5000"|
 
-7. Open the frontend
+8. Open the frontend
    |- Admin dashboard: open `frontend/admin-dashboard.html` in your browser|
    |-----------------------------------------------------------------------|
    |- Customer store: open `frontend/store.html` in your browser|
