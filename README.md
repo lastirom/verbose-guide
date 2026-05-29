@@ -23,10 +23,10 @@ If you received this as a Git repository, follow these steps:
 1. Clone the repository
    ```bash
    git clone https://github.com/lastirom/verbose-guide.git
-   exit
+   ```
    ```bash
    cd verbose-guid
-   exit
+   ```
 3. Install backend dependencies
    |cd backend|
    |----------|
