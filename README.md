@@ -58,9 +58,9 @@ If you received this as a Git repository, follow these steps:
    You should see: "Server running on http://localhost:5000"
 
 11. Open the frontend
-   |- Admin dashboard: open `frontend/admin-dashboard.html` in your browser|
+   |Admin dashboard: open `frontend/admin-dashboard.html` in your browser|
    |-----------------------------------------------------------------------|
-   |- Customer store: open `frontend/store.html` in your browser|
+   |Customer store: open `frontend/store.html` in your browser|
 
 SETUP FROM ZIP FILE
 -------------------
