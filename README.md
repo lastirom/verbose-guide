@@ -36,27 +36,28 @@ If you received this as a Git repository, follow these steps:
    ```
 
 5. Prepare environment variables
-   |Copy `.env.example` to `.env` and edit with your credentials:|
-   |-------------------------------------------------------------|
-   |cp .env.example .env|
-   |Then open `.env` and set your MySQL password, MongoDB URI, etc.|
+   Copy `.env.example` to `.env` and edit with your credentials:
+   cp .env.example .env
+   Then open `.env` and set your MySQL password, MongoDB URI, etc.
 
 6. Create MySQL database using the provided dump file
-   |mysql -u root -p < database.sql|
-   |-------------------------------|
-   |(Enter your MySQL password when prompted.)|
+   ```bash
+   mysql -u root -p < database.sql
+   ```
+   (Enter your MySQL password when prompted.)
 
-7. Start MongoDB
-   |Open a separate terminal and run:|
-   |---------------------------------|
-   |mongod|
+8. Start MongoDB
+   Open a separate terminal and run:
+   ```bash
+   mongod
+   ```
+9. Start the backend server
+   ```bash
+   npm start
+   ```
+   You should see: "Server running on http://localhost:5000"
 
-8. Start the backend server
-   |npm start|
-   |---------|
-   |You should see: "Server running on http://localhost:5000"|
-
-9. Open the frontend
+11. Open the frontend
    |- Admin dashboard: open `frontend/admin-dashboard.html` in your browser|
    |-----------------------------------------------------------------------|
    |- Customer store: open `frontend/store.html` in your browser|
