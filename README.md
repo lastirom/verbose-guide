@@ -28,32 +28,35 @@ If you received this as a Git repository, follow these steps:
    cd verbose-guid
    ```
 3. Install backend dependencies
-   |cd backend|
-   |----------|
-   |npm install|
+   ```bash
+   cd backend
+   ```
+   ```bash
+   npm install
+   ```
 
-4. Prepare environment variables
+5. Prepare environment variables
    |Copy `.env.example` to `.env` and edit with your credentials:|
    |-------------------------------------------------------------|
    |cp .env.example .env|
    |Then open `.env` and set your MySQL password, MongoDB URI, etc.|
 
-5. Create MySQL database using the provided dump file
+6. Create MySQL database using the provided dump file
    |mysql -u root -p < database.sql|
    |-------------------------------|
    |(Enter your MySQL password when prompted.)|
 
-6. Start MongoDB
+7. Start MongoDB
    |Open a separate terminal and run:|
    |---------------------------------|
    |mongod|
 
-7. Start the backend server
+8. Start the backend server
    |npm start|
    |---------|
    |You should see: "Server running on http://localhost:5000"|
 
-8. Open the frontend
+9. Open the frontend
    |- Admin dashboard: open `frontend/admin-dashboard.html` in your browser|
    |-----------------------------------------------------------------------|
    |- Customer store: open `frontend/store.html` in your browser|
